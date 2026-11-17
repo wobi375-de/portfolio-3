@@ -1,0 +1,893 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    max-width: 1100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    background-color: white;
+}
+header{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background: black;
+    color: white;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.consult-btn {
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 52px;
+    margin-top: 70px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #8A8A8A;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0 50px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "graphic graphic ui apps photo photo"
+        "graphic graphic illus illus motion motion";
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 170px;
+    color: white;
+}
+
+.card h2 {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    font-size: 22px;
+}
+
+.graphic {
+    background: rgb(115, 42, 242);
+    grid-area: graphic;
+    min-height: 360px;
+}
+
+.ui {
+    background: #da8f15;
+    grid-area: ui;
+}
+
+.apps {
+    background: #F5C6B8;
+    grid-area: apps;
+}
+
+.photo {
+    background: #6FC3C8;
+    grid-area: photo;
+}
+
+.illus {
+    background: #D89A7A;
+    grid-area: illus;
+}
+
+.motion {
+    background: #3A5F57;
+    grid-area: motion;
+}
+
+/* BOX WEY GO HOLD ALL SHAPES */
+.art-box {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 160px;
+    height: 200px;
+}
+
+.art-box.small {
+    width: 110px;
+    height: 80px;
+}
+
+/* GRAPHIC DESIGN SHAPES */
+.g-purple {
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 70px;
+    height: 130px;
+    background: #4A2A6B;
+}
+
+.g-circle1 {
+    position: absolute;
+    left: 30px;
+    top: 18px;
+    width: 35px;
+    height: 35px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.g-orange {
+    position: absolute;
+    left: 80px;
+    top: 35px;
+    width: 75px;
+    height: 40px;
+    background: #F2B95C;
+    border-radius: 20px;
+}
+
+.g-circle2 {
+    position: absolute;
+    left: 115px;
+    top: 35px;
+    width: 35px;
+    height: 35px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.g-red {
+    position: absolute;
+    left: 110px;
+    top: 75px;
+    width: 35px;
+    height: 35px;
+    background: #E86A5A;
+}
+
+.g-circle3 {
+    position: absolute;
+    left: 80px;
+    top: 75px;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #2A2A2A;
+    border-radius: 50%;
+}
+
+.g-white-tri {
+    position: absolute;
+    left: 40px;
+    top: 105px;
+    width: 0;
+    height: 0;
+    border-left: 95px solid white;
+    border-bottom: 95px solid transparent;
+    transform: rotate(90deg);
+}
+
+.g-green-tri {
+    position: absolute;
+    left: 65px;
+    top: 165px;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #6FC3C8;
+}
+
+.g-dots {
+    position: absolute;
+    left: 10px;
+    top: 135px;
+    color: #2A2A2A;
+    font-size: 16px;
+    line-height: 12px;
+    letter-spacing: 6px;
+}
+
+/* UI/UX CARD */
+.ui {
+    background: #F2B95C;
+    grid-area: ui;
+}
+
+/* Small box for top only - no be big box again */
+.ui-art {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 90px;
+    height: 78px;
+}
+
+/* 1. Orange square - small, top left */
+.ui-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    background: #E88A6A;
+}
+
+/* 2. Brown ring - small, top right */
+.ui-ring {
+    position: absolute;
+    top: 0;
+    left: 48px;
+    width: 38px;
+    height: 38px;
+    border: 5px solid #5A3A2A;
+    border-radius: 50%;
+}
+
+/* 3. 9 small dots - under square */
+.ui-dots {
+    position: absolute;
+    top: 46px;
+    left: 2px;
+    display: grid;
+    grid-template-columns: 7px 7px 7px;
+    gap: 8px 13px;
+}
+
+.ui-dots span {
+    width: 7px;
+    height: 7px;
+    background: #5A3A2A;
+    display: block;
+}
+
+/* 4. White triangle - under ring, small */
+.ui-tri {
+    position: absolute;
+    top: 48px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border-left: 36px solid white;
+    border-bottom: 36px solid transparent;
+    transform: rotate(90deg);
+}
+
+/* APPS CARD */
+.apps {
+    background: #F39E9E;
+    grid-area: apps;
+}
+
+/* Small box for top only */
+.apps-art {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 90px;
+    height: 70px;
+}
+
+/* 1. Purple triangle - top right */
+.a-tri {
+    position: absolute;
+    top: 0;
+    left: 55px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid #8A8AD6;
+    border-bottom: 30px solid transparent;
+    transform: rotate(90deg);
+}
+
+/* 2. 3 small black dashes - for top */
+.a-dash {
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background: #2A2A2A;
+}
+
+.a-dash-1 {
+    top: 8px;
+    left: 17px;
+}
+
+.a-dash-2 {
+    top: 8px;
+    left: 42px;
+}
+
+.a-dash-3 {
+    top: 8px;
+    left: 65px;
+}
+
+/* 3. Purple pill - middle, long */
+.a-pill {
+    position: absolute;
+    top: 30px;
+    left: 17px;
+    width: 65px;
+    height: 30px;
+    background: #6B5A8A;
+    border-radius: 20px;
+}
+
+/* 4. White ring - right end of pill */
+.a-ring {
+    position: absolute;
+    top: 28px;
+    left: 52px;
+    width: 34px;
+    height: 34px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+/* PHOTOGRAPHY CARD */
+.photo {
+    background: #61C4B7;
+    grid-area: photo;
+}
+
+/* Small box for top only */
+.photo-art {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 165px;
+    height: 80px;
+}
+
+/* 1. Black ring - top left */
+.p-black-ring {
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    width: 32px;
+    height: 32px;
+    border: 5px solid #2A2A2A;
+    border-radius: 50%;
+}
+
+/* 2. Orange square - middle */
+.p-orange-square {
+    position: absolute;
+    top: 8px;
+    left: 38px;
+    width: 58px;
+    height: 58px;
+    background: #EB7565;
+}
+
+/* 3. White ring inside orange square */
+.p-white-ring {
+    position: absolute;
+    top: 26px;
+    left: 56px;
+    width: 24px;
+    height: 24px;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+/* 4. Pink triangle - under black ring */
+.p-pink-tri {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-bottom: 28px solid #F39E9E;
+    border-right: 28px solid transparent;
+}
+
+/* 5. White triangle - right of square, top, e point left */
+.p-white-tri {
+    position: absolute;
+    top: 18px;
+    left: 96px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 28px solid white;
+}
+
+/* 6. Dark triangle - right of square, bottom, e point left */
+.p-dark-tri {
+    position: absolute;
+    top: 33px;
+    left: 96px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 28px solid #2A2A2A;
+}
+
+/* 7. 6 small dark dashes - far right */
+.p-dots {
+    position: absolute;
+    top: 10px;
+    left: 128px;
+    display: grid;
+    grid-template-columns: 6px 6px;
+    gap: 14px 10px;
+}
+
+.p-dots span {
+    width: 6px;
+    height: 10px;
+    background: #2A2A2A;
+    display: block;
+}
+
+/* ILLUSTRATIONS CARD */
+.illus {
+    background: #EB7565;
+    grid-area: illus;
+}
+
+/* Small box for top only */
+.illus-art {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 165px;
+    height: 80px;
+}
+
+/* 1 & 2. 9 small dark dashes - middle, behind shapes */
+.i-dots {
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    display: grid;
+    grid-template-columns: 6px 6px 6px;
+    gap: 14px 14px;
+}
+
+.i-dots span {
+    width: 6px;
+    height: 10px;
+    background: #2A2A2A;
+    display: block;
+}
+
+/* 3. White triangle - left top, e point right */
+.i-white-tri {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 0;
+    height: 0;
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    border-left: 36px solid white;
+    transform: rotate(110deg);
+}
+
+/* 4. Mint triangle - left bottom */
+.i-mint-tri {
+    position: absolute;
+    top: 38px;
+    left: 8px;
+    width: 0;
+    height: 0;
+    border-left: 36px solid #A8C4B0;
+    border-bottom: 36px solid transparent;
+    transform: rotate(90deg);
+}
+
+/* 5. Purple square - right middle */
+.i-purple-square {
+    position: absolute;
+    top: 5px;
+    left: 95px;
+    width: 48px;
+    height: 48px;
+    background: #8A8AD6;
+}
+
+/* 6. Pink triangle - under purple square */
+.i-pink-tri {
+    position: absolute;
+    top: 53px;
+    left: 95px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid #F39E9E;
+    border-bottom: 30px solid transparent;
+    transform: rotate(90deg);
+}
+
+/* 7. White ring - far right, e touch purple square */
+.i-white-ring {
+    position: absolute;
+    top: 8px;
+    left: 135px;
+    width: 32px;
+    height: 32px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+/* MOTION GRAPHICS CARD *//* MOTION GRAPHICS CARD */
+.motion {
+    background: #552049;
+    grid-area: motion;
+}
+
+/* Small box for top only */
+.motion-art {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 165px;
+    height: 80px;
+}
+
+/* 1. 4 rings for top */
+.m-ring {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.m-ring-1 {
+    top: 0;
+    left: 25px;
+    border: 5px solid #6B3A5A;
+}
+
+.m-ring-2 {
+    top: 0;
+    left: 52px;
+    border: 5px solid #C48AA8;
+}
+
+.m-ring-3 {
+    top: 0;
+    left: 80px;
+    border: 5px solid #F39E9E;
+}
+
+.m-ring-4 {
+    top: 0;
+    left: 110px;
+    border: 5px solid white;
+}
+
+/* 2. Small white dashes */
+.m-dash {
+    position: absolute;
+    width: 12px;
+    height: 5px;
+    background: white;
+}
+
+.m-dash-1 {
+    top: 52px;
+    left: -4px;
+}
+
+.m-dash-2 {
+    top: 52px;
+    left: 30px;
+}
+
+/* 3. Orange pill - middle */
+.m-pill {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 72px;
+    height: 32px;
+    background: #F6A560;
+    border-radius: 20px;
+}
+
+/* 4. Small white dash inside pill */
+.m-dot {
+    position: absolute;
+    top: 54px;
+    left: 62px;
+    width: 10px;
+    height: 5px;
+    background: white;
+}
+
+/* 5. Pink triangle - right of pill, e point right */
+.m-tri {
+    position: absolute;
+    top: 40px;
+    left: 112px;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 30px solid #F39E9E;
+}
+
+/* TABLET - 701px to 1024px - THIS PHOTO LAYOUT */
+@media (max-width: 1024px) {
+    /* Find your cards container, no matter the name */
+    .cards, .grid, .services, .container-cards {
+        display: grid ;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-areas:
+            "graphic graphic ui apps"
+            "graphic graphic illus illus"
+            "photo photo motion motion";
+            grid-auto-rows: 180px;
+    }
+    .graphic {min-height: 300px ; }
+    .card{
+        overflow: hidden;
+        min-height: 0;
+        height: 100%;
+    }
+}
+
+/* PHONE - Below 700px */
+@media (max-width: 700px) {
+    .cards, .grid, .services, .container-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-areas:
+            "graphic graphic"
+            "graphic graphic"
+            "uiux apps"
+            "illus illus"
+            "photo photo"
+            "motion motion" ;
+        gap: 12px ;
+    }
+    .cards > *:nth-child(1), .grid > *:nth-child(1) { grid-area: graphic ; min-height: 300px ; }
+    .cards > *:nth-child(2), .grid > *:nth-child(2) { grid-area: uiux ; }
+    .cards > *:nth-child(3), .grid > *:nth-child(3) { grid-area: apps ; }
+    .cards > *:nth-child(4), .grid > *:nth-child(4) { grid-area: illus ; }
+    .cards > *:nth-child(5), .grid > *:nth-child(5) { grid-area: photo ; }
+    .cards > *:nth-child(6), .grid > *:nth-child(6) { grid-area: motion ; }
+}
+/* AMY SECTION */
+.about {
+    background: #FDF0E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Left - Make picture circle */
+.about-img {
+    width: 360px;
+    height: 360px;
+    flex-shrink: 0;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Right - Text */
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #030712;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #6B6B6B;
+    margin-bottom: 25px;
+}
+
+/* Orange button */
+.about-btn {
+    display: inline-block;
+    background: #EB7565;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* For phone - make picture go on top, text go under */
+@media (max-width: 700px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-img {
+        width: 280px;
+        height: 280px;
+    }
+}
+/* MY WORK SECTION */
+.work {
+    background: #FDF0E9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.work h2 {
+    font-size: 32px;
+    color: #030712;
+    margin-bottom: 30px;
+}
+
+/* 3 pictures side by side */
+.work-pics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.work-pics img {
+    width: 32%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* 2 round arrows for bottom */
+.work-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.arrow {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #030712;
+    color: white;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+/* BOOK A CALL - BLACK BOX */
+.cta {
+    background: #030712;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 60px 50px;
+    border-radius: 12px;
+}
+
+.cta-text {
+    max-width: 550px;
+}
+
+.cta-text h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.cta-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #D1D1D1;
+}
+
+/* Orange button for inside black box */
+.cta-btn {
+    background: #EB7565;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0 40px 0;
+    background: #FDF0E9;
+}
+
+.footer .logo {
+    width: 50px;
+    height: 50px;
+    background: #030712;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border-radius: 4px;
+}
+
+/* Black button for footer */
+.footer-btn {
+    background: #030712;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* For phone - make button go under text */
+@media (max-width: 700px) {
+    .cta {
+        flex-direction: column;
+        text-align: center;
+        margin: 40px 15px;
+        padding: 40px 25px;
+    }
+}
